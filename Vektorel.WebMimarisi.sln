@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.DataAccess", "Vektorel.DataAccess\Vektorel.DataAccess.csproj", "{A1E5D72E-5C9A-4018-9171-FC7CABAD5D81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.Business", "Vektorel.Business\Vektorel.Business.csproj", "{20A0B54E-CB82-4AAF-B19B-D1F44A6DB436}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.Model", "Vektorel.Model\Vektorel.Model.csproj", "{DAB2242B-1A7F-48B1-93B9-FBBFAF7595B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{C62E3CAA-3B45-41D7-B467-CD86D5EDA0C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.WebAPI", "Vektorel.WebAPI\Vektorel.WebAPI.csproj", "{A0753EA1-1FD3-4C7C-9FCD-BAC434581B7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E5D72E-5C9A-4018-9171-FC7CABAD5D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E5D72E-5C9A-4018-9171-FC7CABAD5D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E5D72E-5C9A-4018-9171-FC7CABAD5D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E5D72E-5C9A-4018-9171-FC7CABAD5D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A0B54E-CB82-4AAF-B19B-D1F44A6DB436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A0B54E-CB82-4AAF-B19B-D1F44A6DB436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A0B54E-CB82-4AAF-B19B-D1F44A6DB436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A0B54E-CB82-4AAF-B19B-D1F44A6DB436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB2242B-1A7F-48B1-93B9-FBBFAF7595B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB2242B-1A7F-48B1-93B9-FBBFAF7595B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB2242B-1A7F-48B1-93B9-FBBFAF7595B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB2242B-1A7F-48B1-93B9-FBBFAF7595B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62E3CAA-3B45-41D7-B467-CD86D5EDA0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62E3CAA-3B45-41D7-B467-CD86D5EDA0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62E3CAA-3B45-41D7-B467-CD86D5EDA0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62E3CAA-3B45-41D7-B467-CD86D5EDA0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0753EA1-1FD3-4C7C-9FCD-BAC434581B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0753EA1-1FD3-4C7C-9FCD-BAC434581B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0753EA1-1FD3-4C7C-9FCD-BAC434581B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0753EA1-1FD3-4C7C-9FCD-BAC434581B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13148642-8628-416E-BFC8-AC4208C89601}
+	EndGlobalSection
+EndGlobal

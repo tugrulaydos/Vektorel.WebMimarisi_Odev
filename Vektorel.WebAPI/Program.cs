@@ -23,6 +23,8 @@ namespace Vektorel.WebAPI
             builder.Services.AddSingleton<IProductDal, EfProductRepository>();
             builder.Services.AddSingleton<ICategoryService, CategoryManager>();
             builder.Services.AddSingleton<ICategoryDal, EFCategoryRepository>();
+            builder.Services.AddSingleton<ISupplierDal,EfSupplierRepository>();
+            builder.Services.AddSingleton<ISupplierService,SupplierManager>();
 
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

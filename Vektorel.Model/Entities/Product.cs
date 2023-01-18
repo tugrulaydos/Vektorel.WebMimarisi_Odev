@@ -12,11 +12,15 @@ namespace Vektorel.Model.Entities
         public int ProductId { get; set; }
 
         public int? CategoryId { get; set; }
+
+        public int? SupplierID { get; set; }
         public string ProductName { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
         public short? UnitsInStock { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public virtual Supplier Supplier { get; set; }
         // Eager loading - Lazy loading
 
     }

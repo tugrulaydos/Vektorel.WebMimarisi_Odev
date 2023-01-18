@@ -15,14 +15,14 @@ namespace Vektorel.Business.Concrete
     {
         private IProductDal _productDal;
 
-        public ProductManager()
+        public ProductManager(IProductDal productDal)
         {
-            _productDal = new EfProductRepository();
+            _productDal = productDal;
         }
 
-        public List<Product> GetAllProducts(Expression<Func<Product, bool>> expression = null, string includeEntity = null)
+        public List<Product> GetAllProducts(Expression<Func<Product, bool>> expression = null, params Expression<Func<Product, object>>[] includeEntities)
         {
-            return _productDal.GetAll(expression, includeEntity);
+            return _productDal.GetAll(expression, includeEntities);
         }
     }
 }

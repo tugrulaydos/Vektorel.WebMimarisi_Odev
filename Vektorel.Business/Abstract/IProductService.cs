@@ -10,6 +10,6 @@ namespace Vektorel.Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAllProducts(Expression<Func<Product, bool>> expression = null, string includeEntity = null);
+        List<Product> GetAllProducts(Expression<Func<Product, bool>> expression = null, params Expression<Func<Product, object>>[] includeEntities);
     }
 }

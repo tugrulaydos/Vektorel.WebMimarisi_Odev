@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vektorel.Business.Abstract;
 using Vektorel.Business.Concrete;
+using Vektorel.DataAccess.Abstract;
 //using Vektorel.DataAccess.Concrete.AdoNet.Repositories;
 using Vektorel.DataAccess.Concrete.EntityFramework.Context;
 using Vektorel.DataAccess.Concrete.EntityFramework.Repositories;
@@ -15,26 +16,22 @@ namespace Vektorel.WebAPI.Controllers
     public class ProductsController : ControllerBase
     {
 
-        private IProductService _productService;
+        private IProductService _productService;   
+
+   
+        
 
         public ProductsController(IProductService productService)
         {
             _productService = productService;
+          
         }
         
         [HttpGet("getall")]
         public List<Product> GetAllProducts()
-        {
-            //ProductManager productManager = new ProductManager(new AdoNetProductRepository());
-            //var products = productManager.GetAllProducts();
+        {                             
 
-            //var products = _productService.GetAllProducts();
-
-            //NorthwndContext context = new NorthwndContext();
-            //var products = context.Products.Include("Category").ToList();
-
-            var products = _productService.GetAllProducts(X=>X.ProductId >= 70, "Category");
-
+            var products = _productService.GetAllProducts(X=>X.ProductId >= 70, y=>y.Category, z => z.Supplier);    
             return products;
         }
     }

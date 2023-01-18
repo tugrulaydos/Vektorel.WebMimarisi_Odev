@@ -1,5 +1,6 @@
 ﻿using Infrastructure.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +14,30 @@ namespace Infrastructure.DataAccess.Repositories.EntityFramework
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
-        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null, string includeEntity = null)
+        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null, params Expression<Func<TEntity,object>>[] includeEntity)
         {
             using (TContext context = new TContext())
-            {
+            {                        
+
                 IQueryable<TEntity> dbSet = context.Set<TEntity>();
 
-                if (includeEntity != null)
+                if(predicate != null)
                 {
-                    dbSet = dbSet.Include(includeEntity);
+                    dbSet = dbSet.Where(predicate);
                 }
 
-                // dbSet = dbSet.Include(includeEntity);
-                // dbSet = dbSet.Include(includeEntity);
+                if (includeEntity.Any())
+                {
+                    foreach (var item in includeEntity)
+                        dbSet = dbSet.Include(item);
+                }
 
-                return predicate == null
-                    ? dbSet.ToList()
-                    : dbSet.Where(predicate).ToList();
+
+                return dbSet.ToList();              
+
+
+               
+
             }
             
         }

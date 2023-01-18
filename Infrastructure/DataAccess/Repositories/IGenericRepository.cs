@@ -9,6 +9,6 @@ namespace Infrastructure.DataAccess.Repositories
 {
     public interface IGenericRepository<TEntity>
     {
-        List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null, string includeEntity = null);
+        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null, params Expression<Func<TEntity, object>>[] includeEntity);
     }
 }
